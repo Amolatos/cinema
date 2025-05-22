@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+    .btn-primary {
+        @apply px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 
+        transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply px-4 py-2 bg-white text-indigo-600 rounded-md border border-indigo-600 
+        hover:bg-indigo-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+    }
+
+    .card {
+        @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden;
+    }
+
+    .input-field {
+        @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+        focus:border-indigo-500 focus:ring-indigo-500 transition-colors duration-200;
+    }
+
+    .nav-link {
+        @apply text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium 
+        transition-colors duration-200;
+    }
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mobile-menu {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Card hover effects */
+.hover-card {
+    @apply transform transition-transform duration-200 hover:-translate-y-1;
+}
+
+/* Responsive typography */
+@screen sm {
+    .responsive-text {
+        @apply text-base;
+    }
+}
+
+@screen md {
+    .responsive-text {
+        @apply text-lg;
+    }
+}
+
+@screen lg {
+    .responsive-text {
+        @apply text-xl;
+    }
+}
